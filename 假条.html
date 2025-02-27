@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>请假详情</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      background-color: #fff;
+      padding: 15px;
+      display: block;
+      text-align: center;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      text-align: center;
+      
+    }
+
+    .tab {
+      display: flex;
+      border-bottom: 2px solid #ddd;
+      background-color: #fff;
+    }
+
+    .tab button {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-bottom: 3px solid transparent;
+    }
+
+    .tab button.active {
+      color: #399dfb;
+      border-bottom: 3px solid #399dfb;
+    }
+
+    .section {
+      padding: 15px;
+      background-color: #fff;
+      margin: 15px 0;
+    
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .status {
+      text-align: center;
+      padding: 15px;
+      margin: -15px -15px 15px -15px;
+      background-color: #3baf48;
+      color: #fff;
+      font-size: 18px;
+
+      margin-bottom: 15px;
+    }
+
+    .info {
+      line-height: 1.8;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .info div {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      display: flex;
+      border-top: 1px solid #ddd;
+      background-color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer button {
+      flex: 1;
+      padding: 15px;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .footer button:nth-child(3) {
+      background-color: #3baf48;
+      color: #fff;
+    }
+    .container1 {
+        text-align: center;
+
+
+        position: fixed;
+        width: 100%;
+    }
+    .container2 {
+        
+
+
+        width: 100%;
+    }
+    .unlesstext{
+        clear: rgba(255, 255, 255, 0);
+    }
+    #section1{
+        margin-top: 0px;
+    }
+  </style>
+<style>
+    .parallelogram-container {
+      position: relative;
+      width: 108%;
+      height: 12.5px; /* 设置容器的高度 */
+      overflow: hidden; /* 隐藏溢出容器外的部分 */
+    }
+
+    .parallelogram {
+      width: 25px;
+      height: 12.5px;
+      background-color: #ffffff;
+      transform: skew(-45deg);
+      position: absolute;
+      
+      animation: moveRight 14s linear infinite; /* 平行四边形向右移动的动画 */
+    }
+
+    @keyframes moveRight {
+      0% {
+        left: -400px; /* 初始位置在页面左侧外部 */
+      }
+      100% {
+        left: 100%; /* 移动到页面右侧外部 */
+      }
+    }
+    .infotitle{
+        color: grey;
+    }
+  </style>
+  
+
+
+</head>
+<body>
+
+    <div class="container1">
+  <div class="header">
+    <h1>假的请假详情</h1>
+  </div>
+
+  <div class="tab">
+    <button class="active">请假信息</button>
+    <button>核验二维码</button>
+  </div>
+</div>
+</div>
+
+<div class="container2" style="color: rgba(0, 0, 0, 0.01); background-color: rgba(0, 0, 0, 0.01);">
+    <div class="header" style="background-color: rgba(0, 0, 0, 0.01);">
+      <h1 class="unlesstext" style="color: rgba(0, 0, 0, 0.01);">请假详情</h1>
+    </div>
+  
+    <div class="tab" style="background-color: rgba(0, 0, 0, 0.01); border-bottom: 0;">
+      <button class="active" class="unlesstext" style="color: rgba(0, 0, 0, 0.01);border-bottom: 0;">请假信息</button>
+      <button  class="unlesstext" style="color: rgba(0, 0, 0, 0.01);">核验二维码</button>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="section" id="section1">
+    <div class="status" id="status" style="padding: 1px; background-color: #ff9900; font-size: 14px;" >如何销假？</div>
+    <div class="status" id="status" style="background: linear-gradient(to bottom, #01aa59, #00dd74);"><div>✔ 审批已通过</div><div style="font-size: 30px; letter-spacing:3px;">正在休假中</div> <div id="parallelogram-container" class="parallelogram-container" style="margin: 0px -15px -15px -15px;"></div></div>
+    <div class="info" style="margin-bottom: 0;">
+        <div style="margin-bottom: 0;"><strong>请假信息</strong>
+
+            <div id="hebin" style="display: flex; justify-content: space-between; margin-bottom: 0px;">
+              <div style="width: 50%; display: flex; justify-content: space-between;margin: 0;"><div class="infotitle"style="width: 70px;margin: 0;">请假类型：</div><div style="width: 107px;margin: 0;">请假类型：4 离校申请（限寒假、暑假等近期不返校）</div></div>
+              <div style="width: 50%; display: flex; justify-content: space-between;margin: 0;"><div class="infotitle"style="width: 70px;margin: 0;">需要离校：</div><div style="width: 107px;margin: 0;">离校                     </div></div>
+            </div>
+
+            <div id="hebin" style="display: flex; justify-content: space-between; margin-bottom: 0;">
+              <div class="infotitle" style="margin-bottom: 0;">销假规则：</div>
+              <div style="color: orange; margin-left: -15px; margin-bottom: 0;">离校请假需要销假，非离校请假无需销假 </div>
+              <div style="color: rgb(26, 169, 195); cursor: pointer; margin-bottom: 0;"> 查看></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0;">
+              <div class="infotitle" style="margin-bottom: 0;">实际休假时间：</div>
+              <div style="color: black; margin-bottom: 0;"></div>
+            </div>
+        
+        </div>
+
+      
+    </div>
+  </div>
+
+<div class="section">
+    <div class="info">
+        <div><strong>我的请假申请</strong></div>
+        <div><span class="infotitle">开始时间：</span><span style="color: black;"><strong>01-11 17:18</strong></span></div>
+        <div><span class="infotitle">结束时间：</span><span style="color: black;"><strong>02-14 17:18</strong></span></div>
+        <div><span class="infotitle">审批流程：</span><span style="color: black;">共1步</span><span style="color: rgb(26, 169, 195);">  查看></span></div>
+        <div><span class="infotitle">紧急联系人：</span><span style="color: black;">16225211203</span></div>
+        <div><span class="infotitle">请假原因：</span><span style="color: black;">回家回家回家回家</span></div>
+        <div><span class="infotitle">抄送人：</span><span style="color: black;">无</span></div>
+        <div><span class="infotitle">发起位置：</span><span style="color: rgb(26, 169, 195);">江苏省淮安市清江浦区文信路</span></div>
+        <div><span class="infotitle">目的地：</span><span style="color: black;">江苏省/苏州市/虎丘区/甪直全港浜前杜村87号</span></div>
+        <div><span class="infotitle">宿舍信息：</span><span style="color: black;">--学思园3-109-1</span></div>
+        <div style="position: absolute; top: 60%; left: 80%; transform: translate(-50%, -50%); background-color: #ecf3fd; border-radius: 10px; padding: 20px;padding-top: 10px;padding-bottom: 10px; border: 2px solid #399dfb;"><strong style="color:#399dfb">1天</strong></div>
+ 
+    
+    
+    </div>
+</div>
+
+
+
+  <div class="section">
+    <div class="info">
+      <div><strong>审批流程记录</strong></div>
+      <div>顾文杰 - 发起申请 01-11 17:21</div>
+      <div>一级：季淑淑 - 审批通过 01-11 18:15</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button>转发</button>
+    <button>申请续假</button>
+    <button style="background-color: #399dfb">去销假</button>
+  </div>
+  <script>
+    function createParallelogram(container) {
+      const parallelogram = document.createElement('div');
+      parallelogram.classList.add('parallelogram');
+      container.appendChild(parallelogram);
+
+      // 销毁平行四边形
+      parallelogram.addEventListener('animationend', () => {
+        parallelogram.remove();
+      });
+    }
+
+    function startAnimation() {
+      const container = document.getElementById('parallelogram-container');
+      setInterval(() => {
+        createParallelogram(container);
+      }, 1000);
+    }
+
+    // 启动动画
+    startAnimation();
+  </script>
+</body>
+</html>
