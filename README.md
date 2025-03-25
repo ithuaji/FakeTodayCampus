@@ -3,7 +3,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ithuaji/FakeTodayCampus)  
 ![GitHub top language](https://img.shields.io/github/languages/top/ithuaji/FakeTodayCampus)  
 
-## 项目简介  
+## 项目简介 
+这里存放着一些今日校园伪造的页面 哦！不，这只是我的css练习作业罢了
 这是一个基于 **CSS 练习** 的仿「今日校园」界面设计项目。  
 通过模仿真实 App 的布局和交互效果，探索 CSS 的高级特性（如 Flexbox、Grid、动画等），**仅用于学习目的**，不涉及任何功能实现或数据交互。  
 
